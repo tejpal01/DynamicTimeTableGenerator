@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model DynamicTimeTable.Models.InputModel
+
+<h2>TimeTable Input</h2>
+<form asp-action="EnterSubjects" method="post">
+    <div>
+        <label>Working Days (1–7):</label>
+        <input asp-for="WorkingDays" class="form-control" />
+        <span asp-validation-for="WorkingDays" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Subjects per Day (&lt;9):</label>
+        <input asp-for="SubjectsPerDay" class="form-control" />
+        <span asp-validation-for="SubjectsPerDay" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Total Subjects:</label>
+        <input asp-for="TotalSubjects" class="form-control" />
+        <span asp-validation-for="TotalSubjects" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

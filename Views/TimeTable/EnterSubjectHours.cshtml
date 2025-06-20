@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<DynamicTimeTable.Models.SubjectHourModel>
+@{
+    var totalHours = ViewBag.TotalHours;
+}
+<h2>Assign Hours to Subjects (Total: @totalHours)</h2>
+
+<form asp-action="GenerateTimeTable" method="post">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <div class="form-group">
+            <label>Subject Name:</label>
+            <input name="[@i].SubjectName" value="@Model[i].SubjectName" class="form-control" />
+
+            <label>Hours:</label>
+            <input name="[@i].Hours" type="number" class="form-control" />
+        </div>
+        <br />
+    }
+    <button type="submit" class="btn btn-success">Generate Timetable</button>
+</form>
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}

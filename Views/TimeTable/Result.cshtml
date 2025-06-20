@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model string[,]
+@{
+    var cols = ViewBag.WorkingDays;
+    var rows = ViewBag.SubjectsPerDay;
+}
+<h2>Generated Timetable</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            @for (int c = 0; c < cols; c++)
+            {
+                <th>Day @(@c + 1)</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (int r = 0; r < rows; r++)
+        {
+            <tr>
+                @for (int c = 0; c < cols; c++)
+                {
+                    <td>@Model[r, c]</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
