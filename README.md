@@ -38,6 +38,10 @@ A web application built with **ASP.NET Core MVC (v8)** that dynamically generate
 ## 🖼️ Screenshots
 
 > *(Add screenshots here if available)*
+![Screenshot 2025-06-20 224937](https://github.com/user-attachments/assets/6e9eae72-5106-4a73-ad5c-56dfe3cfcc6c)
+![Screenshot 2025-06-20 224918](https://github.com/user-attachments/assets/eb5dd4f5-3e37-404a-927b-d60d8493099b)
+![Screenshot 2025-06-20 224903](https://github.com/user-attachments/assets/b8a099fb-f725-4b78-8ac9-feb8da2ee715)
+![Screenshot 2025-06-20 224755](https://github.com/user-attachments/assets/32390cba-cb33-435a-ad3c-017cbe606e21)
 
 ---
 
